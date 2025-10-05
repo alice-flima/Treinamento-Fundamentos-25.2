@@ -70,14 +70,26 @@ text-align: center;
     flex-direction: column;
     justify-content:center;
 }
-#carrinhodecompras li{
+#carrinhodecompras li{ /*organiza o numero de produtos e a imagem*/
     list-style: none;
     padding: 0 20px;
     text-align: center;
 }
-.carrinhounico{
+.carrinhoacomps{ /*é o botao*/
     background-color:antiquewhite;
 }
-.carrinhounico:hover{
+.carrinhoacomps:hover{ /*botao com cursor nele*/
+background-color: #f1680d;
+}
+.carrinhosalsichas{ /*é o botao*/
+    background-color:antiquewhite;
+}
+.carrinhosalsichas:hover{ /*botao com cursor nele*/
+background-color: #f1680d;
+}
+.carrinhopaes{ /*é o botao*/
+    background-color:antiquewhite;
+}
+.carrinhopaes:hover{ /*botao com cursor nele*/
 background-color: #f1680d;
 }
