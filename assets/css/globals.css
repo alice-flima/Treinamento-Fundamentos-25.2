@@ -15,19 +15,19 @@
   font-size: 16px;
   color: hsl(0,0%,0%);
 }  
-section-p1{
+#section-p1{
     padding: 40px 80px;
 }
-.produtos{
+#produtos{
 text-align: center;
 }
-.produtos .pro-container{
+#produtos .pro-container{
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
     flex-wrap: wrap;
 }
-.produtos .pro-container .pro{
+#produtos .pro-container .pro{
     width: 23%;
     min-width: 250px;
     position: relative;
@@ -44,6 +44,10 @@ text-align: center;
 .logo{
     width: 150px;
     height: 150px;
+}
+.imagensprodutos{
+    width: 180px;
+    height: 180px;
 }
 #cabecalho{
     display: flex;
