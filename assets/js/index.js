@@ -15,9 +15,9 @@ let salsichas = [
     { id: 8, nome: "Vegetariana", preco: 6.00, imagem: "salsichavegetariana.png", quantidade: 0, classe:  "carrinhosalsichas" },
 ]
 let acomps =[
-    { id: 9, nome: "Milho", preco: 2.00, quantidade: 0, classe: "carrinhoacomps"},
-    { id: 10, nome: "Queijo", preco: 3.00, quantidade: 0,  classe: "carrinhoacomps" },
-    { id: 11, nome: "Batata palha", preco: 2.50, quantidade: 0,  classe: "carrinhoacomps" }
+    { id: 9, nome: "Milho", preco: 2.00, imagem:"milho.jpg", quantidade: 0, classe: "carrinhoacomps"},
+    { id: 10, nome: "Queijo", preco: 3.00, imagem:"queijo.jpg", quantidade: 0,  classe: "carrinhoacomps" },
+    { id: 11, nome: "Batata palha", preco: 2.50, imagem:"patatapalha.jpg", quantidade: 0,  classe: "carrinhoacomps" }
 ];
 
 function novoobjeto(objeto) {
