@@ -65,3 +65,19 @@ text-align: center;
     list-style: none;
     padding: 0 20px
 }
+#carrinhodecompras{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+#carrinhodecompras li{
+    list-style: none;
+    padding: 0 20px;
+    text-align: center;
+}
+.carrinhounico{
+    background-color:antiquewhite;
+}
+.carrinhounico:hover{
+background-color: #f1680d;
+}

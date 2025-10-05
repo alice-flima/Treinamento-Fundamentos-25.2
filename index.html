@@ -1,14 +1,13 @@
 <!-- Colocar código HTML aqui (e linkar js e css!) -->
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Monte seu Dogão</title>
     <link rel="stylesheet" href="assets/css/globals.css">
 
 </head>
 <body>
-     <script src="assets/js/index.js"></script>
 <!--cabeçalho-->
 
 <section id="cabecalho">
@@ -16,7 +15,12 @@
     <div>
         <ul id="barradenavegacao">
             <li id="saudacao">Olá, usuário!</li> <!--dá oi para o usuario-->
+            <li>
+            <ul id="carrinhodecompras">
             <li><a href=""> <img src="assets/imgs/carrinho.png" class ="icon" alt="carrinho de compras"></a></li> <!--adicionar pagina do carrinho de compras-->
+            <li id="numerocarrinho">0 </li>
+         </ul>
+         </li>
             <li><a href=""><img src="assets/imgs/setalogout.png" class ="icon" alt="logout"></a></li> <!--adicionarlogout-->
         </ul>
     </div>
@@ -24,116 +28,111 @@
 
     <h1>Monte o seu Dogão</h1>
     <h2>Escolha um pão</h2>
-
-</div>
-<section id="produtos" class="section-p1"> <!--vitrine de produtos-->
+<section class="produtos section-p1"> <!--vitrine de produtos-->
     <div class="pro-container">
         <div class="pro">
             <img src="assets/imgs/paotradicional.jpg" alt="Pão Tradicional" class="imagensprodutos">
             <div class = "des">
-            <h5>Pão Tradicional</h5>
+            <h5 class="menuitem">Pão Tradicional</h5>
             <h4>R$5,00</h4>
-            <button class = carrinhounico>Adicionar</button>
+            <button class="carrinhounico" data-id="1">Adicionar</button>
             </div>
         </div>
          <div class="pro">
             <img src="assets/imgs/paodesal.jpg" alt="Pão de Sal" class="imagensprodutos">
             <div class = "des">
-            <h5>Pão de Sal</h5>
+            <h5 class="menuitem">Pão de Sal</h5>
             <h4>R$5,00</h4>
-            <button class = carrinhounico>Adicionar</button>
+            <button class="carrinhounico" data-id="2">Adicionar</button>
             </div>
             <!--falta colocar os botoes dos carrinhos-->
         </div>
          <div class="pro">
             <img src="assets/imgs/paobrioche.png" alt="Pão Brioche"class="imagensprodutos">
             <div class = "des">
-            <h5>Pão Brioche</h5>
-            <button class = carrinhounico>Adicionar</button>
+            <h5 class="menuitem">Pão Brioche</h5>
+            <button class="carrinhounico" data-id="3">Adicionar</button>
             <h4>R$5,00</h4>
             </div>
         </div>
          <div class="pro">
             <img src="assets/imgs/paoaustraliano.jpg" alt="Pão Australiano"class="imagensprodutos">
             <div class = "des">
-            <h5>Pão Australiano</h5>
-            <button class = carrinhounico>Adicionar</button>
+            <h5 class="menuitem">Pão Australiano</h5>
+            <button class="carrinhounico" data-id="4">Adicionar</button>
             <h4>R$5,00</h4>
             </div>
         </div>
     </div>
 </section>
     <h2>Escolha uma salsicha</h2>
-   <section id="produtos" class="section-p1"> <!--vitrine de produtos-->
+   <section class="produtos section-p1"> <!--vitrine de produtos-->
     <div class="pro-container">
         <div class="pro">
             <img src="assets/imgs/salsichaaoponto.jpg" alt="Ao ponto"class="imagensprodutos">
             <div class = "des">
-            <h5>Ao ponto</h5>
+            <h5 class="menuitem">Ao ponto</h5>
             <h4>R$5,00</h4>
-            <button class = carrinhounico>Adicionar</button>
+            <button class="carrinhounico" data-id="5">Adicionar</button>
             </div>
         </div>
          <div class="pro">
             <img src="assets/imgs/salsichamalpassada.jpg" alt="Mal passada" class="imagensprodutos">
             <div class = "des">
-            <h5>Mal passada</h5>
+            <h5 class="menuitem">Mal passada</h5>
             <h4>R$5,00</h4>
-            <button class = carrinhounico>Adicionar</button>
+            <button class="carrinhounico" data-id="6">Adicionar</button>
             </div>
         </div>
          <div class="pro">
             <img src="assets/imgs/salsichabempassada.jpg" alt="Bem passada" class="imagensprodutos">
             <div class = "des">
-            <h5>Bem passada</h5>
+            <h5 class="menuitem">Bem passada</h5>
             <h4>R$5,00</h4>
-            <button class = carrinhounico>Adicionar</button>
+            <button class="carrinhounico" data-id="7">Adicionar</button>
             </div>
         </div>
          <div class="pro">
-            <img src="assets/imgs/salsichavegetariana.png" alt="Vegetariana", class="imagensprodutos">
+            <img src="assets/imgs/salsichavegetariana.png" alt="Vegetariana" class="imagensprodutos">
             <div class = "des">
-            <h5>Vegetariana</h5>
+            <h5 class="menuitem">Vegetariana</h5>
             <h4>R$5,00</h4>
-            <button class = carrinhounico>Adicionar</button>
+            <button class="carrinhounico" data-id="8">Adicionar</button>
             </div>
         </div>
     </div>
 </section>
 
     <h2>Escolha os acompanhamentos</h2>
-    <section id="produtos" class="section-p1"> <!--vitrine de produtos-->
+    <section class="produtos section-p1"> <!--vitrine de produtos-->
     <div class="pro-container">
         <div class="pro">
             <img src="assets/imgs/milho.jpg" alt="Milho"class="imagensprodutos">
             <div class = "des">
-            <h5>Milho</h5>
+            <h5 class="menuitem">Milho</h5>
             <h4>R$5,00</h4>
+            <button class="carrinhounico" data-id="11">Adicionar</button>
             </div>
         </div>
          <div class="pro">
             <img src="assets/imgs/queijo.jpg" alt="Queijo" class="imagensprodutos">
             <div class = "des">
-            <h5>Queijo</h5>
+            <h5 class="menuitem">Queijo</h5>
             <h4>R$5,00</h4>
+            <button class="carrinhounico" data-id="9">Adicionar</button>
             </div>
         </div>
          <div class="pro">
             <img src="assets/imgs/patatapalha.jpg" alt="Batata palha"class="imagensprodutos">
             <div class = "des">
-            <h5>Batata palha</h5>
+            <h5 class="menuitem">Batata palha</h5>
             <h4>R$5,00</h4>
-            </div>
-        </div>
-         <div class="pro">
-            <img src="assets/imgs/ntecdasilvajr.jpg" alt="Pão Australiano", class="imagensprodutos">
-            <div class = "des">
-            <h5>Pão Australiano</h5>
-            <h4>R$5,00</h4>
+            <button class="carrinhounico" data-id="10">Adicionar</button>
             </div>
         </div>
     </div>
 </section>
+<script src="assets/js/index.js"></script>
 
 </body>
 </html>

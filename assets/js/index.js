@@ -1,48 +1,83 @@
 // Código JS aqui!
-var numerocarrinho = 0; //controla quantos itens tem no carrinho
-
-let catalogoPaes = [ 
-    { id: 1, nome: "Tradicional", preco: 10.00, imagem: "pao-tradicional.jpg", quantidade: 0 },
-    { id: 2, nome: "Brioche", preco: 10.00, imagem: "pao-brioche.jpg", quantidade: 0 },
-    { id: 3, nome: "Pão de Sal", preco: 10.00, imagem: "pao-de-sal.jpg", quantidade: 0 },
-    { id: 4, nome: "Australiano", preco: 10.00, imagem: "pao-australiano.jpg", quantidade: 0 }
-]; 
-
-let catalogoSalsichas = [ 
-    { id: 1, nome: "Ao Ponto", preco: 10.00, imagem: "salsicha-aoponto.jpg", quantidade: 0 },
-    { id: 2, nome: "Mal Passada", preco: 10.00, imagem: "salsicha-malpassada.jpg", quantidade: 0 },
-    { id: 3, nome: "Bem Passada", preco: 10.00, imagem: "salsicha-bempassada.jpg", quantidade: 0 }
-]; 
-
-let catalogoAcompanhamentos = [ 
-    { id: 1, nome: "Queijo", preco: 29.99}, 
-    { id: 2, nome: "Batata palha", preco: 49.99 }, 
-    { id: 3, nome: "Milho", preco: 79.99 },
-    { id: 4, nome: "Uva passa", preco: 79.99 } 
-
-]; 
-let catalogoMolhos = [ 
-    { id: 1, nome: "Ketchup", preco: 29.99 }, 
-    { id: 2, nome: "Mostarda", preco: 49.99 }, 
-    { id: 3, nome: "Maionese", preco: 79.99 },
-    { id: 4, nome: "Molho de pimenta", preco: 79.99 } 
-
+let numerocarrinho = 0; 
+let valorcarrinho = 0;
+let pao = 0;
+let salsicha = 0;
+const menuitems = document.querySelectorAll(".carrinhounico");
+let catalogo = [ 
+    { id: 1, nome: "Pão Tradicional", preco: 10.00, imagem: "paotradicional.jpg", quantidade: 0 },
+    { id: 2, nome: "Pão de Sal", preco: 10.00, imagem: "paobrioche.png", quantidade: 0 },
+    { id: 3, nome: "Pão Brioche", preco: 10.00, imagem: "paodesal.jpg", quantidade: 0 },
+    { id: 4, nome: "Australiano", preco: 10.00, imagem: "paoaustraliano.jpg", quantidade: 0 },
+    { id: 5, nome: "Ao ponto", preco: 10.00, imagem: "salsichaaoponto.jpg", quantidade: 0 },
+    { id: 6, nome: "Mal passada", preco: 10.00, imagem: "salsichamalpassada.jpg", quantidade: 0 },
+    { id: 7, nome: "Bem passada", preco: 10.00, imagem: "salsichabempassada.jpg", quantidade: 0 },
+    { id: 8, nome: "Vegetariana", preco: 10.00, imagem: "salsichavegetariana.png", quantidade: 0 },
+    { id: 9, nome: "Milho", preco: 29.99, quantidade: 0 },
+    { id: 10, nome: "Queijo", preco: 49.99, quantidade: 0 },
+    { id: 11, nome: "Batata palha", preco: 79.99, quantidade: 0 }
 ];
-
-//outra forma de criar e manipular os objetos:
-function Objeto(nome, preco, descricao, imagem, estado) {
-  this.nome = nome;
-  this.preco = preco;
-  this.descricao = descricao;
-  this.estado = 0;
-  this.mudarestado = function() { //colocar ou tirar do carrinho
-    if (this.estado == 0){
-        this.estado = 1;
-        numerocarrinho +=1;
+let choosenproduct = catalogo[0];
+menuitems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    choosenproduct = catalogo[index];
+    ///currentproductNome.textContent = choosenproduct.nome;
+    ///currentproductPreco.textContent = "$" + choosenproduct.preco;
+    if(index <=3 ){
+       if(pao==0){
+        pao =1;
+        numerocarrinho+=1;
+        valorcarrinho+= choosenproduct.preco;
+        document.getElementById("numerocarrinho").innerHTML = numerocarrinho
+        choosenproduct.quantidade = 1;
+       }
+       else{
+        if (choosenproduct.quantidade == 0){
+            alert("Você só pode escolher um pão")
+        }
+        else{
+        pao =0;
+        numerocarrinho-=1;
+        valorcarrinho-= choosenproduct.preco;
+        document.getElementById("numerocarrinho").innerHTML = numerocarrinho
+        choosenproduct.quantidade = 0;
+       }
     }
-    else{
-        this.estado = 0;
-        numerocarrinho -=1;
-    }
-    };
 }
+    else if (index<=7){
+        if(salsicha==0){
+        salsicha =1;
+        numerocarrinho+=1;
+        valorcarrinho+= choosenproduct.preco;
+        document.getElementById("numerocarrinho").innerHTML = numerocarrinho
+        choosenproduct.quantidade = 1;
+        }
+        else{
+        if (choosenproduct.quantidade == 0){
+            alert("Você só pode escolher uma salsicha");
+        }
+        else{
+        salsicha =0;
+        numerocarrinho-=1;
+        valorcarrinho-= choosenproduct.preco;
+        document.getElementById("numerocarrinho").innerHTML = numerocarrinho
+        choosenproduct.quantidade = 0;
+       }
+    }
+}
+    else{
+        if(choosenproduct.quantidade ==0){
+        numerocarrinho+=1;
+        valorcarrinho+= choosenproduct.preco
+        document.getElementById("numerocarrinho").innerHTML = numerocarrinho
+        choosenproduct.quantidade = 1;
+        }
+        else{
+        numerocarrinho-=1;
+        valorcarrinho-= choosenproduct.preco;
+        document.getElementById("numerocarrinho").innerHTML = numerocarrinho
+        choosenproduct.quantidade = 0;
+        }
+    }
+    });
+  });
