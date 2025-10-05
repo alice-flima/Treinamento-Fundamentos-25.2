@@ -31,6 +31,7 @@ menuitems.forEach((item, index) => {
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 1;
         menuitems[index].textContent = "Remover"
+        menuitems.style.backgroundColor = "red";
        }
        else{
         if (choosenproduct.quantidade == 0){
