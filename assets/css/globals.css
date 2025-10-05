@@ -37,3 +37,27 @@ text-align: center;
     margin:15px;
 
 }
+.icon{
+    width: 70px;
+    height: 70px;
+}
+.logo{
+    width: 150px;
+    height: 150px;
+}
+#cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1680d;
+    box-shadow: 10 0 0 rgb;
+}
+#barradenavegacao{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+#barradenavegacao li{
+    list-style: none;
+    padding: 0 20px
+}
