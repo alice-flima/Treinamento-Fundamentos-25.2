@@ -1,9 +1,9 @@
-/* Estilos css aqui! */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Spartan, sans-serif;"
+    font-family: "Spartan, sans-serif"; 
+   
 }
     h2 {
       text-align: center;
@@ -16,6 +16,7 @@
   color: hsl(0,0%,0%);
 }  
 #section-p1{
+    margin-top: 100px;
     padding: 40px 80px;
 }
 .produtos{
@@ -54,7 +55,10 @@ text-align: center;
     align-items: center;
     justify-content: space-between;
     background: #f1680d;
+    width: 100%;
     box-shadow: 10 0 0 rgb;
+    z-index: 9; 
+ 
 }
 #barradenavegacao{
     display:flex;
@@ -77,6 +81,7 @@ text-align: center;
 }
 .carrinhoacomps{ /*é o botao*/
     background-color:antiquewhite;
+    z-index: 99;  
 }
 .carrinhoacomps:hover{ /*botao com cursor nele*/
 background-color: #f1680d;
