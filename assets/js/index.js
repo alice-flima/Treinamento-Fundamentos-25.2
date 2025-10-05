@@ -31,7 +31,7 @@ menuitems.forEach((item, index) => {
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 1;
         menuitems[index].textContent = "Remover"
-        menuitems.style.backgroundColor = "red";
+        menuitems[index].style.backgroundColor = ' #f1150dff';
        }
        else{
         if (choosenproduct.quantidade == 0){
@@ -44,6 +44,7 @@ menuitems.forEach((item, index) => {
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 0;
         menuitems[index].textContent = "Adicionar"
+        menuitems[index].style.backgroundColor = ' antiquewhite';
        }
     }
 }
@@ -55,6 +56,7 @@ menuitems.forEach((item, index) => {
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 1;
         menuitems[index].textContent = "Remover"
+        menuitems[index].style.backgroundColor = ' #f1150dff';
         }
         else{
         if (choosenproduct.quantidade == 0){
@@ -67,6 +69,7 @@ menuitems.forEach((item, index) => {
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 0;
         menuitems[index].textContent = "Adicionar"
+        menuitems[index].style.backgroundColor = ' antiquewhite';
        }
     }
 }
@@ -77,13 +80,15 @@ menuitems.forEach((item, index) => {
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 1;
         menuitems[index].textContent = "Remover"
+        menuitems[index].style.backgroundColor = ' #f1150dff';
         }
         else{
         numerocarrinho-=1;
         valorcarrinho-= choosenproduct.preco;
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 0;
-        menuitems[index].textContent = "ReAdicionar"
+        menuitems[index].textContent = "Adicionar"
+        menuitems[index].style.backgroundColor = ' antiquewhite';
         }
     }
     });
