@@ -30,6 +30,7 @@ menuitems.forEach((item, index) => {
         valorcarrinho+= choosenproduct.preco;
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 1;
+        menuitems[index].textContent = "Remover"
        }
        else{
         if (choosenproduct.quantidade == 0){
@@ -41,6 +42,7 @@ menuitems.forEach((item, index) => {
         valorcarrinho-= choosenproduct.preco;
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 0;
+        menuitems[index].textContent = "Adicionar"
        }
     }
 }
@@ -51,6 +53,7 @@ menuitems.forEach((item, index) => {
         valorcarrinho+= choosenproduct.preco;
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 1;
+        menuitems[index].textContent = "Remover"
         }
         else{
         if (choosenproduct.quantidade == 0){
@@ -62,6 +65,7 @@ menuitems.forEach((item, index) => {
         valorcarrinho-= choosenproduct.preco;
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 0;
+        menuitems[index].textContent = "Adicionar"
        }
     }
 }
@@ -71,12 +75,14 @@ menuitems.forEach((item, index) => {
         valorcarrinho+= choosenproduct.preco
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 1;
+        menuitems[index].textContent = "Remover"
         }
         else{
         numerocarrinho-=1;
         valorcarrinho-= choosenproduct.preco;
         document.getElementById("numerocarrinho").innerHTML = numerocarrinho
         choosenproduct.quantidade = 0;
+        menuitems[index].textContent = "ReAdicionar"
         }
     }
     });
