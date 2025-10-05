@@ -3,21 +3,21 @@ let valorcarrinho = 0;
 let pao = 0;
 let salsicha = 0;
 let paes = [ 
-    { id: 1, nome: "Pão Tradicional", preco: 5.00, imagem: "paotradicional.jpg", quantidade: 0, classe: "carrinhopaes", },
-    { id: 2, nome: "Pão Brioche", preco: 5.00, imagem: "paobrioche.png", quantidade: 0, classe: "carrinhopaes" },
-    { id: 3, nome: "Pão de Sal", preco: 4.00, imagem: "paodesal.jpg", quantidade: 0, classe: "carrinhopaes" },
-    { id: 4, nome: "Australiano", preco: 6.00, imagem: "paoaustraliano.jpg", quantidade: 0, classe: "carrinhopaes" },
+    { id: 1, nome: "Pão Tradicional", preco: 5.00, imagem: "paotradicional.jpg", quantidade: 0, classe: "carrinhopaes", descricao: "O mais clássico"},
+    { id: 2, nome: "Pão Brioche", preco: 5.00, imagem: "paobrioche.png", quantidade: 0, classe: "carrinhopaes", descricao:"Para um dogão mais macio" },
+    { id: 3, nome: "Pão de Sal", preco: 4.00, imagem: "paodesal.jpg", quantidade: 0, classe: "carrinhopaes", descricao: "O comum que funciona" },
+    { id: 4, nome: "Australiano", preco: 6.00, imagem: "paoaustraliano.jpg", quantidade: 0, classe: "carrinhopaes", descricao: "Para dar um tom sofisticado" },
 ]
 let salsichas = [
-    { id: 5, nome: "Ao ponto", preco: 5.00, imagem: "salsichaaoponto.jpg", quantidade: 0, classe: "carrinhosalsichas" },
-    { id: 6, nome: "Mal passada", preco: 5.00, imagem: "salsichamalpassada.jpg", quantidade: 0, classe:  "carrinhosalsichas"},
-    { id: 7, nome: "Bem passada", preco: 5.00, imagem: "salsichabempassada.jpg", quantidade: 0, classe:  "carrinhosalsichas"},
-    { id: 8, nome: "Vegetariana", preco: 6.00, imagem: "salsichavegetariana.png", quantidade: 0, classe:  "carrinhosalsichas" },
+    { id: 5, nome: "Ao ponto", preco: 5.00, imagem: "salsichaaoponto.jpg", quantidade: 0, classe: "carrinhosalsichas", descricao: "O clássico que funciona" },
+    { id: 6, nome: "Mal passada", preco: 5.00, imagem: "salsichamalpassada.jpg", quantidade: 0, classe:  "carrinhosalsichas", descricao:"Para quem gosta de suculênica"},
+    { id: 7, nome: "Bem passada", preco: 5.00, imagem: "salsichabempassada.jpg", quantidade: 0, classe:  "carrinhosalsichas", descricao: "Mais crocante" },
+    { id: 8, nome: "Vegetariana", preco: 6.00, imagem: "salsichavegetariana.png", quantidade: 0, classe:  "carrinhosalsichas", descricao: "Porque dogão de planta ainda é dogão" },
 ]
 let acomps =[
-    { id: 9, nome: "Milho", preco: 2.00, imagem:"milho.jpg", quantidade: 0, classe: "carrinhoacomps"},
-    { id: 10, nome: "Queijo", preco: 3.00, imagem:"queijo.jpg", quantidade: 0,  classe: "carrinhoacomps" },
-    { id: 11, nome: "Batata palha", preco: 2.50, imagem:"patatapalha.jpg", quantidade: 0,  classe: "carrinhoacomps" }
+    { id: 9, nome: "Milho", preco: 2.00, imagem:"milho.jpg", quantidade: 0, classe: "carrinhoacomps", descricao: "Para dar um sabor a mais"},
+    { id: 10, nome: "Queijo", preco: 3.00, imagem:"queijo.jpg", quantidade: 0,  classe: "carrinhoacomps", descricao: "Derretendo..." },
+    { id: 11, nome: "Batata palha", preco: 2.50, imagem:"patatapalha.jpg", quantidade: 0,  classe: "carrinhoacomps", descricao:"A queridinha" }
 ];
 
 function novoobjeto(objeto) {
@@ -25,6 +25,7 @@ function novoobjeto(objeto) {
         <div class="pro">
             <img src="assets/imgs/${objeto.imagem}" alt="${objeto.nome}" class="imagensprodutos">
                 <h5 class="menuitem">${objeto.nome}</h5>
+                <h7>${objeto.descricao}</h7>
                 <h4>R$${objeto.preco}</h4>
                 <button 
                     class="${objeto.classe}" 
