@@ -3,7 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Marker Felt, fantasy"; 
+    
    
+}
+.titulo{
+    font-size: 60px;
+    color: rgb(255, 81, 0) ;
+
 }
     h2 {
       text-align: center;
@@ -26,7 +32,9 @@ text-align: center;
     display: flex;
     justify-content: center;
     padding-top: 10px;
+    width:auto;
     flex-wrap: wrap;
+   
 }
 .produtos .pro-container .pro{
 
@@ -34,7 +42,9 @@ text-align: center;
     cursor: pointer;
     padding: 10px;
     border: 1px;
+    border-radius: 5px;
     margin:15px;
+     background-color: #ca651dbb;
 
 }
 .icon{
